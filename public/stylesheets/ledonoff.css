@@ -1,0 +1,11 @@
+div.externalBox {
+    background-color:lightgray;
+    display: block;
+    width: 80px;
+  }
+
+img{
+  width: 50px;
+  margin-left: 15px;
+}
+  
