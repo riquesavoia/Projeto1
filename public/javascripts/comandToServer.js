@@ -1,19 +1,20 @@
 function toggleAction(buttonType) {
     let sendData;
-    let element = document.getElementById("img");
+    //let element = document.getElementById("img");
+    let element = $("#img").src;
     if(buttonType == 'on')
     {
-        element.src = '/images/acesso.png';
+        element = '/images/acesso.png';
         sendData = 1;
     }
     else
     {
-        element.src = '/images/apagado.png';
+        element = '/images/apagado.png';
         sendData = 0;
     }
     console.log(sendData);
-
-    axios.post('/led', {
+    $.post("/led", {sendData : sendData});
+    /*axios.post('/led', {
         sendData : sendData,
       })
       .then(function (response) {
@@ -21,5 +22,6 @@ function toggleAction(buttonType) {
       })
       .catch(function (error) {
         console.log(error);
-      });
+      });*/
+      
 }
